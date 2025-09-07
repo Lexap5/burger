@@ -7,22 +7,23 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles/normalize.css" />
     <link rel="stylesheet" href="styles/main.css" />
   </head>
   <body>
-    <header class="header">
+    <header class="header" id="headerTop">
       <div class="container">
         <div class="header-wrapper">
+          <button class="burger-menu" onclick="openModal()"></button>
           <div class="logo"></div>
           <nav class="nav">
             <a href="#" class="nav-link">Главная</a>
             <a href="#" class="nav-link">Меню</a>
             <a href="#" class="nav-link">О нас</a>
-            <a href="#" class="nav-link">Контакты</a>
+            <a href="contacts.html" class="nav-link">Контакты</a>
           </nav>
           <a href="#" class="cart">$125<span class="cart-count">5</span></a>
         </div>
@@ -54,12 +55,12 @@
             Только при покупке 3-х и более позиций, мы дарим скидку. Акции
             &nbsp;не суммируются.
           </p>
-          <button class="banner-btn">Купить сейчас</button>
+          <a href="#menuBurger" class="banner-btn">Купить сейчас</a>
         </div>
       </div>
     </section>
     <main>
-      <section>
+      <section id="menuBurger">
         <div class="container">
           <div class="menu">
             <div class="menu-header">
@@ -136,32 +137,38 @@
             <div class="menu-header">
               <h2 class="menu-title">ДОПОЛНИТЕЛЬНО</h2>
             </div>
-            <div class="menu-box">
-              <div class="menu-item">
+            <div class="menu-box _additionally">
+              <div class="menu-item _additionally">
                 <div class="menu-thumb">
                   <img src="/images/menu/07.jpg" alt="Острый бургер" />
                 </div>
-                <h3 class="menu-name">Сэндвич</h3>
-                <p class="menu-price">$3</p>
-                <button type="button" class="menu-btn">Купить</button>
+                <div class="menu-info">
+                  <h3 class="menu-name">Сэндвич</h3>
+                  <p class="menu-price">$3</p>
+                  <button type="button" class="menu-btn">Купить</button>
+                </div>
               </div>
 
-              <div class="menu-item">
+              <div class="menu-item _additionally">
                 <div class="menu-thumb">
                   <img src="/images/menu/08.jpg" alt="Острый бургер" />
                 </div>
-                <h3 class="menu-name">Картошка Фри</h3>
-                <p class="menu-price">$5</p>
-                <button type="button" class="menu-btn">Купить</button>
+                <div class="menu-info">
+                  <h3 class="menu-name">Картошка Фри</h3>
+                  <p class="menu-price">$5</p>
+                  <button type="button" class="menu-btn">Купить</button>
+                </div>
               </div>
 
-              <div class="menu-item">
+              <div class="menu-item _additionally">
                 <div class="menu-thumb">
                   <img src="/images/menu/09.jpg" alt="Острый бургер" />
                 </div>
-                <h3 class="menu-name">Хот-Дог</h3>
-                <p class="menu-price">$7</p>
-                <button type="button" class="menu-btn">Купить</button>
+                <div class="menu-info">
+                  <h3 class="menu-name">Хот-Дог</h3>
+                  <p class="menu-price">$7</p>
+                  <button type="button" class="menu-btn">Купить</button>
+                </div>
               </div>
             </div>
           </div>
@@ -182,6 +189,12 @@
               <a href="#">Методы оплаты</a>
               <a href="#">Контакты</a>
             </nav>
+            <a class="footer-phone _mobile" href="tel:+79007871313"
+              >+7 900-787-13-13</a
+            >
+            <a class="footer-phone _mobile" href="tel:+79007871414"
+              >+7 900-787-14-14</a
+            >
           </div>
 
           <div class="footer-item">
@@ -206,5 +219,16 @@
         </div>
       </div>
     </footer>
+    <a href="#headerTop" class="button-up hidden" id="btnUp">Наверх</a>
+    <div class="modal" id="modal">
+      <nav class="nav _modal">
+        <a href="#" class="nav-link">Главная</a>
+        <a href="#" class="nav-link">Меню</a>
+        <a href="#" class="nav-link">О нас</a>
+        <a href="contacts.html" class="nav-link">Контакты</a>
+      </nav>
+      <button class="modal-close" onclick="closeModal()"></button>
+    </div>
+    <script src="scripts/script.js"></script>
   </body>
 </html>
